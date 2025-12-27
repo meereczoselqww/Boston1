@@ -71,8 +71,9 @@ jobs:
     
     - name: Check code formatting with black
       run: |
-        black --check src/ tests/ || true
+        black --check src/ tests/
     
     - name: Type check with mypy
       run: |
-        mypy src/ --ignore-missing-imports || true
+        mypy src/ --ignore-missing-imports
+      continue-on-error: true  # Allow workflow to continue even if mypy finds issues

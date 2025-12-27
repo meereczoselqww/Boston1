@@ -222,6 +222,3 @@ class TestFeatureEngineering:
         
         pd.testing.assert_frame_equal(X_fit_transform, X_fit_then_transform)
 
-
-if __name__ == '__main__':
-    pytest.main([__file__, '-v'])

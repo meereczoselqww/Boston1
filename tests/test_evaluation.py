@@ -188,6 +188,3 @@ class TestCrossValidation:
         assert results['mean_score'] > 0
         assert results['std_score'] >= 0
 
-
-if __name__ == '__main__':
-    pytest.main([__file__, '-v'])

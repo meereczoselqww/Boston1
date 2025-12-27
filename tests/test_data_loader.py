@@ -110,6 +110,3 @@ def test_data_value_ranges():
     assert (df['PTRATIO'] > 0).all()
     assert (df['PTRATIO'] < 100).all()
 
-
-if __name__ == '__main__':
-    pytest.main([__file__, '-v'])
