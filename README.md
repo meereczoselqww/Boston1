@@ -139,6 +139,53 @@ The Boston Housing dataset contains information about houses in Boston suburbs w
 - Pipelines/models are modular in `src/`; saved artifacts live under `models/` for repeatable runs.
 - Optuna tuning helper (`optuna_tune_xgboost`) returns the best fitted model and the study for auditability.
 
+### Alternative: Conda Environment
+
+You can also use conda for environment management:
+
+```bash
+conda env create -f environment.yml
+conda activate boston-housing-ml
+```
+
+## Testing
+
+The project includes comprehensive unit tests for all core modules:
+
+```bash
+# Run all tests
+pytest tests/ -v
+
+# Run with coverage report
+pytest tests/ -v --cov=src --cov-report=html
+
+# Run specific test file
+pytest tests/test_data_loader.py -v
+```
+
+### Test Coverage
+- `test_data_loader.py`: Data loading and splitting functionality
+- `test_preprocessing.py`: Feature engineering and preprocessing pipeline
+- `test_evaluation.py`: Metrics calculation and statistical testing
+
+## Continuous Integration
+
+The project uses GitHub Actions for automated testing:
+- Tests run on Python 3.9, 3.10, and 3.11
+- Code linting with flake8
+- Code formatting with black
+- Type checking with mypy
+- Coverage reporting with pytest-cov
+
+See [.github/workflows/ci.yml](.github/workflows/ci.yml) for details.
+
+## Documentation
+
+Comprehensive documentation is available:
+- **Final Report**: [reports/final_report.md](reports/final_report.md) - Complete project report with methodology, results, limitations, and ethical considerations
+- **Technical Report**: [reports/MOUAD IDRISSI ZAKI Boston Housing Price Prediction System 202239060034.docx](reports/MOUAD%20IDRISSI%20ZAKI%20Boston%20Housing%20Price%20Prediction%20System%20202239060034.docx)
+- **Code Documentation**: All modules include docstrings with type hints
+
 ## Author
 
 MOUAD IDRISSI ZAKI
