@@ -36,7 +36,7 @@ class DataLoader:
         # Load data with space-separated values
         df = pd.read_csv(
             self.data_path,
-            delim_whitespace=True,
+            sep=r'\s+',
             names=self.feature_names,
             header=None
         )
